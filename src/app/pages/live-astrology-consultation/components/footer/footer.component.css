@@ -159,7 +159,7 @@
 .footer-bottom-bar {
     background: #6868f9;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1rem 0 100px 0;
 }
 
 .bottom-bar-inner {
@@ -227,6 +227,9 @@
 @media (max-width: 480px) {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-bottom-bar {
+        padding-bottom: 150px;
     }
 }
 
