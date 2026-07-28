@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "astroved-new": {
+    "AstroVed-Web": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -35,13 +35,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "1MB",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "50kB",
+                  "maximumError": "100kB"
                 }
               ],
               "outputHashing": "all"
@@ -58,10 +58,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "astroved-new:build:production"
+              "buildTarget": "AstroVed-Web:build:production"
             },
             "development": {
-              "buildTarget": "astroved-new:build:development"
+              "buildTarget": "AstroVed-Web:build:development"
             }
           },
           "defaultConfiguration": "development"
