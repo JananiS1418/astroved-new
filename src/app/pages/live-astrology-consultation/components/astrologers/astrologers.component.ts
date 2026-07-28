@@ -70,6 +70,7 @@ export class AstrologersComponent {
     this.selectedTimeSlot = null;
     this.selectedDuration = 30;
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('modal-open');
   }
 
   closeBooking() {
@@ -77,6 +78,7 @@ export class AstrologersComponent {
     this.bookingStep = 1;
     if (!this.selectedAstrologer) {
       document.body.style.overflow = 'auto';
+      document.body.classList.remove('modal-open');
     }
   }
 
@@ -120,11 +122,15 @@ export class AstrologersComponent {
   openProfile(astro: any) {
     this.selectedAstrologer = astro;
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('modal-open');
   }
 
   closeProfile() {
     this.selectedAstrologer = null;
-    document.body.style.overflow = 'auto';
+    if (!this.selectedAstrologerForBooking) {
+      document.body.style.overflow = 'auto';
+      document.body.classList.remove('modal-open');
+    }
   }
 
   formatList(items: string | string[]): string {
