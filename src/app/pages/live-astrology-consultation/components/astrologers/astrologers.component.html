@@ -50,7 +50,8 @@
               Book Now
             </button>
           </div>
-          <div class="card-urgency text-center mt-2" style="font-size: 0.75rem; color: #e85d04; font-weight: 600; margin-top: 0.5rem;">
+          <div class="card-urgency text-center mt-2"
+            style="font-size: 0.75rem; color: #e85d04; font-weight: 600; margin-top: 0.5rem;">
             ⚡ Next available slot today
           </div>
         </div>
@@ -228,27 +229,7 @@
           <span class="summary-value price-val">{{ getPriceForDuration() }}</span>
         </div>
 
-        <div class="package-inclusions" style="margin-top: 1.5rem; padding: 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
-          <h4 style="margin: 0 0 0.8rem 0; font-size: 0.95rem; color: #334155;">Package Includes:</h4>
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: #475569;">
-            <li style="display: flex; align-items: center; gap: 0.5rem;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Live Video/Audio Consultation
-            </li>
-            <li style="display: flex; align-items: center; gap: 0.5rem;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Session Recording
-            </li>
-            <li style="display: flex; align-items: center; gap: 0.5rem;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Personalized Remedies
-            </li>
-            <li style="display: flex; align-items: center; gap: 0.5rem;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Post-Consultation Support
-            </li>
-          </ul>
-        </div>
+
 
         <div class="summary-actions center">
           <button class="btn-primary" (click)="nextBookingStep()">Confirm</button>
@@ -260,13 +241,15 @@
     <!-- STEP 3: Payment Hold Confirmation -->
     <ng-container *ngIf="bookingStep === 3">
       <div class="booking-summary-box final-step">
-        <p class="step3-datetime">{{ activeDate }}, 2026 {{ selectedTimeSlot }} <span class="timezone">India Standard Time</span></p>
+        <p class="step3-datetime">{{ activeDate }}, 2026 {{ selectedTimeSlot }} <span class="timezone">India Standard
+            Time</span></p>
         <p class="step3-bold">You will receive the confirmation mail once you complete the payment</p>
-        
+
         <div class="step3-yellow-box">
-          Your Selected Time Slot is now booked. You have 10 Minutes to confirm your appointment with payment before it is released.
+          Your Selected Time Slot is now booked. You have 10 Minutes to confirm your appointment with payment before it
+          is released.
         </div>
-        
+
         <div class="summary-actions center">
           <button class="btn-primary proceed-btn" (click)="closeBooking()">Proceed to Payment</button>
         </div>

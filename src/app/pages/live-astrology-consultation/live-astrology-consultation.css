@@ -229,8 +229,15 @@ a {
 }
 
 @keyframes gentle-pulse {
-    0% { opacity: 0.8; transform: scale(0.98); }
-    100% { opacity: 1; transform: scale(1.02); }
+    0% {
+        opacity: 0.8;
+        transform: scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
 }
 
 @media (max-width: 768px) {
@@ -240,7 +247,7 @@ a {
         gap: 0.5rem;
         padding: 0 1rem;
     }
-    
+
     .sticky-title {
         font-size: 0.95rem;
     }
@@ -314,6 +321,21 @@ a {
     background: #e68a00;
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(230, 138, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .scroll-top-btn {
+        bottom: 90px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-top-btn {
+        bottom: 160px;
+    }
 }
 
 @media (max-width: 768px) {

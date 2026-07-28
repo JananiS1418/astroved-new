@@ -29,7 +29,9 @@
     font-size: 2rem;
     font-weight: 600;
     margin: 0 0 0.5rem 0;
-    color: #6868f9;
+    background: linear-gradient(135deg, #6868f9 0%, #a274ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     letter-spacing: 0.5px;
 }
 
@@ -98,6 +100,13 @@
     justify-content: center;
     color: #000000;
     margin-bottom: 0.4rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.price-card:hover .icon-circle {
+    transform: translateY(-4px) scale(1.1) rotate(5deg);
+    background: #ebe0ff;
+    color: #6868f9;
 }
 
 .icon-circle.small {
@@ -130,6 +139,13 @@
     border-radius: 40px;
     padding: 0.3rem 0.3rem 0.3rem 1rem;
     background: #fdfcff;
+    transition: all 0.3s ease;
+}
+
+.language-row:hover, .mode-row:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(104, 104, 249, 0.06);
+    border-color: rgba(104, 104, 249, 0.35);
 }
 
 .lang-left {
@@ -212,6 +228,7 @@
     border-radius: 40px;
     padding: 0.3rem 0.5rem 0.3rem 1rem;
     background: #fdfcff;
+    transition: all 0.3s ease;
 }
 
 .modes-list {
@@ -229,6 +246,15 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mode-badge:hover {
+    background: #e2e2fa;
+    color: #6868f9;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 10px rgba(104, 104, 249, 0.1);
 }
 
 .inclusions-row {
@@ -244,6 +270,13 @@
     gap: 1rem;
     flex-wrap: wrap;
     margin-top: 0.2rem;
+    transition: all 0.4s ease;
+}
+
+.inclusions-row:hover {
+    background: rgba(104, 104, 249, 0.06);
+    border-style: solid;
+    transform: scale(1.01);
 }
 
 .inclusions-title {
@@ -299,12 +332,24 @@
 
 .dot.green {
     background: #10b981;
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+    animation: pulse-dot-green 2s infinite;
 }
 
 .dot.red {
     background: #ef4444;
-    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+    animation: pulse-dot-red 2s infinite;
+}
+
+@keyframes pulse-dot-green {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+    70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+@keyframes pulse-dot-red {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+    70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
 }
 
 /* ============================================================
