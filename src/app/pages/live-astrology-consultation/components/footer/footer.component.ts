@@ -16,8 +16,5 @@ export class FooterComponent {
     this.showScrollButton = window.scrollY > 500;
   }
 
-  scrollToTop(event: Event) {
-    event.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+
 }
